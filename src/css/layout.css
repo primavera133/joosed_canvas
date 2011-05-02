@@ -1,0 +1,35 @@
+
+#main-wrapper {
+    width: 107em;
+    margin: 0 auto;
+    background: #333;
+}
+
+#header {
+    width: 100%;
+	background: #DDDDDD;
+}
+#content-wrapper {
+	float: left;
+	width: 67em;
+    padding: 2em 0;
+}
+#content-main {
+	float: right;
+	width: 37em;
+}
+#content-secondary {
+	float: left;
+	width: 30em;
+}
+#sidebar {
+	float: left;
+	width: 30em;
+    padding: 2em 0;
+}
+#footer {
+	clear: both;
+	width: 100%;
+    background: #000;
+}
+

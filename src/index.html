@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<title>Joose canvas</title>
+    <meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="js/jquery-ui-1.8.10.custom/css/ui-darkness/jquery-ui-1.8.10.custom.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="js/fauxconsole/fauxconsole.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/canvas.css" />
+
+    <script src="js/jquery-ui-1.8.10.custom/js/jquery-1.4.4.min.js"></script>
+    <script src="js/jquery-ui-1.8.10.custom/js/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="js/fnagel-jquery-ui-1e07175/ui/jquery.ui.selectmenu.js"></script>
+
+    <script src="js/fauxconsole/fauxconsole.js"></script>
+
+	<script type="text/javascript" src="js/joose/v2.1/joose.js"></script>
+	<script type="text/javascript" src="js/canvas/role_rotateable.js"></script>
+	<script type="text/javascript" src="js/canvas/type_sides.js"></script>
+	<script type="text/javascript" src="js/canvas/class_position.js"></script>
+	<script type="text/javascript" src="js/canvas/class_angle.js"></script>
+	<script type="text/javascript" src="js/canvas/class_offset.js"></script>
+	<script type="text/javascript" src="js/canvas/class_figure.js"></script>
+	<script type="text/javascript" src="js/canvas/class_polygon.js"></script>
+    <script type="text/javascript" src="js/canvas/class_canvas.js"></script>
+    <script type="text/javascript" src="js/canvas/class_canvasController.js"></script>
+    <script type="text/javascript" src="js/canvas/class_uiControllers.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+            window.canvasController = new JCUI.CanvasController({
+                $canvas: $("#myCanvas")
+            });
+            window.uiCOntroller = new JCUI.UiControllers();
+
+		});
+	</script>
+
+</head>
+<body>
+<div id="main-wrapper">
+    <form name="controllersForm">
+        <div id="header"></div>
+        <div id="content-wrapper">
+            <div id="content-main">
+
+                <canvas id="myCanvas" width="500" height="500"></canvas>
+            </div>
+            <div id="content-secondary">
+
+
+            </div>
+        </div>
+            <div id="sidebar">
+                <h2>Sides: <span id="sides-amount"></span></h2>
+                <div id="sides-wrapper" class="slider-wrapper">
+                    <div id="sides-min" class="slider-min"></div>
+                    <div id="sides-max" class="slider-max"></div>
+
+                    <div id="sides-slider" class="slider"></div>
+                </div>
+
+                <h2>Shape</h2>
+                <div id="shapeSet">
+                    <input type="radio" name="shape" id="shape-1" value="polygon" checked><label for="shape-1">Polygon</label>
+                    <input type="radio" name="shape" id="shape-2" value="star" disabled><label for="shape-2">Star</label>
+                </div>
+
+                <h2>Rotation:<span id="rotation-amount">0</span></h2>
+                <div id="rotation-wrapper" class="slider-wrapper">
+                    <div id="rotation-min" class="slider-min">Slow</div>
+                    <div id="rotation-max" class="slider-max">Fast</div>
+
+                    <div id="rotation-x-slider" class="slider"></div>
+                </div>
+
+                <h2>Bounce X:<span id="bounce-x-amount">0</span></h2>
+                <div id="bounce-x-wrapper" class="slider-wrapper">
+                    <div id="bounce-x-min" class="slider-min">Slow</div>
+                    <div id="bounce-x-max" class="slider-max">Fast</div>
+
+                    <div id="bounce-x-slider" class="slider"></div>
+                </div>
+
+                <h2>Bounce Y:<span id="bounce-y-amount">0</span></h2>
+                <div id="bounce-y-wrapper" class="slider-wrapper">
+                    <div id="bounce-y-min" class="slider-min">Slow</div>
+                    <div id="bounce-y-max" class="slider-max">Fast</div>
+
+                    <div id="bounce-y-slider" class="slider"></div>
+                </div>
+
+
+            </div>
+        <div id="footer"></div>
+    </form>
+</div>
+
+<!--div id="canvas-wrapper">
+	<canvas id="myCanvas" width="500" height="500">Fallback content</canvas>
+</div-->
+
+<!--div id=""slider-bar">
+    <div id="slider1">teeest</div>
+</div-->
+
+</body>
+
+</html>
